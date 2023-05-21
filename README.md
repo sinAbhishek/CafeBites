@@ -41,7 +41,7 @@ Users can sort items according to their type.
 
 # RunLocally
 ```bash
-  git clone https://github.com/sinAbhishek/ChatApp.git
+  git clone https://github.com/sinAbhishek/CafeBites.git
 ```
 
 Go to the root directory
