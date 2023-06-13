@@ -4,9 +4,11 @@ import post from "../../instance";
 import { NavLink } from "react-router-dom";
 import "./register.css";
 import axios from "axios";
+import ScaleLoader from "react-spinners/ScaleLoader";
 const Register = () => {
   const navigate = useNavigate();
   const [active, setactive] = useState(false);
+  const [Loading, setloading] = useState(false);
   const Url = process.env.REACT_APP_Url;
   const [register, setRegister] = useState({
     username: "",
@@ -28,10 +30,12 @@ const Register = () => {
       setactive(true);
     } else {
       try {
+        setloading(true);
         const res = await axios.post(`${Url}/Auth/register`, register);
-
+        setloading(false);
         navigate("/Login");
       } catch (err) {
+        setloading(false);
         console.log(err);
       }
     }
@@ -70,6 +74,18 @@ const Register = () => {
           <label>Email cannot be empty</label>
         )}
         <button onClick={sendregister}>REGISTER</button>
+        {Loading && (
+          <div className="scale1lod">
+            <ScaleLoader
+              color={"#03ff46"}
+              loading={Loading}
+              width={"3px"}
+              height={"20px"}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        )}
       </div>
       <div className="direct">
         Already registered ?{" "}

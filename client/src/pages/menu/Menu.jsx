@@ -5,12 +5,14 @@ import axios from "axios";
 import Result from "../../components/Search result/Search_result";
 import useFetch from "../../hooks/useFetch.js";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 const Menu = () => {
   const y = "Hot Coffees";
   const [type, setType] = useState("");
   const [open, setopen] = useState(false);
-  const { data, loading } = useFetch(`/Brew?type=${type}`);
+  const [Loading, setloading] = useState(true);
+  const { data } = useFetch(`/Brew?type=${type}`);
   const [items, setitems] = useState("");
   const [categoryDrink, setcategoryDrink] = useState("");
   const [categoryFood, setcategoryFood] = useState("");
@@ -18,6 +20,9 @@ const Menu = () => {
   var Drinks = [];
   var Food = [];
   var item = "";
+  useEffect(() => {
+    data && setloading(false);
+  }, [data]);
   useEffect(() => {
     const call = async () => {
       const res = await axios.get(`${Url}/Brew`);
@@ -103,9 +108,22 @@ const Menu = () => {
                 ))}
             </div>
           </div>
-          <div className="results">
-            {loading ? "loading" : <Result items={data} />}
-          </div>
+          {Loading ? (
+            <div className="scalelod">
+              <ScaleLoader
+                color={"#03ff46"}
+                loading={Loading}
+                width={"3px"}
+                height={"20px"}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </div>
+          ) : (
+            <div className="results">
+              <Result items={data} />
+            </div>
+          )}
         </div>
       </div>
     </div>

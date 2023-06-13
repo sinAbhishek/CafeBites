@@ -7,11 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import post from "../../instance";
 import { ToastContainer, toast } from "react-toastify";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import "react-toastify/dist/ReactToastify.css";
 import "./login.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [Loading, setloading] = useState(false);
   const Url = process.env.REACT_APP_Url;
   const { loading, error, dispatch } = useContext(AuthContext);
   const [loginDetails, setLoginDetails] = useState({
@@ -28,10 +30,13 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
+      setloading(true);
       const res = await axios.post(`${Url}/Auth/login`, loginDetails);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      setloading(false);
       navigate("/");
     } catch (err) {
+      setloading(false);
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
       console.log(err);
       toast.error(err.response.data.message, {
@@ -65,6 +70,18 @@ const Login = () => {
           onChange={handleChange}
         />
         <button onClick={handleClick}>LOGIN</button>
+        {Loading && (
+          <div className="scaleelod">
+            <ScaleLoader
+              color={"#03ff46"}
+              loading={Loading}
+              width={"3px"}
+              height={"20px"}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        )}
         <div className="direct">
           New User?{" "}
           <NavLink to={"/register"}>

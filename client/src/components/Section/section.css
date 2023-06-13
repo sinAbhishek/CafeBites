@@ -1,0 +1,19 @@
+.s1 {
+  background: rgb(255, 253, 251);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 251, 1) 0%,
+    rgba(228, 179, 123, 1) 100%
+  );
+  width: 100%;
+  height: 80vh;
+}
+.cspill {
+  width: 40rem;
+  height: 40rem;
+  transform: rotate(-0.08turn);
+}
+.cbean {
+  width: 18rem;
+  height: 18rem;
+}
