@@ -2,6 +2,7 @@ import React from "react";
 import "./section.css";
 import cfspill from "../../data/image/coffespill.png";
 import cbeans from "../../data/image/My project.png";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 const Section = () => {
   return (
     <div className="s1 relative mt-20">
@@ -12,8 +13,10 @@ const Section = () => {
               Enjoy Your Coffee Strong Your Activity
             </h2>
             <button className=" bg-slate-900 text-slate-100 w-max px-4 rounded-full mt-20 py-2">
-              {" "}
-              Shop Now
+              <div className=" flex items-center">
+                <p className=" mr-2 text-lg">Shop Now</p>
+                <AiOutlineShoppingCart size={"2rem"} />
+              </div>
             </button>
           </div>
         </div>

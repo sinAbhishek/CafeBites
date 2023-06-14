@@ -1,3 +1,4 @@
+import Book from "../../components/Book/Book.jsx";
 import Featured from "../../components/Featured/Featured.jsx";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import Section from "../../components/Section/Section.jsx";
@@ -8,6 +9,7 @@ const Home = () => {
       <Navbar />
       <Section />
       <Featured />
+      <Book />
     </div>
   );
 };
