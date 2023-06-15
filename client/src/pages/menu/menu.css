@@ -5,8 +5,8 @@ body {
   height: 100%;
 }
 .main {
-  background-color: #e6ebdf;
   min-height: 100vh;
+  background-color: rgb(223, 233, 241);
 }
 .scalelod {
   width: 100vw;
@@ -22,16 +22,18 @@ body {
 }
 .filter-wrapper {
   display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   justify-content: center;
+  align-items: center;
 }
 .category {
   position: sticky;
   top: 30px;
   margin-top: 30px;
   margin-left: 20px;
-  background-color: #e6e6e6;
+
   height: 500px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -50,18 +52,22 @@ body {
   flex-direction: column;
   margin: 30px 20px 0px 10px;
 }
+.subBtn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.subBtn {
+  transition: 0.3s;
+}
 .results {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   padding: 20px;
-  margin-top: 8rem;
+  margin-top: 4rem;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   width: 80%;
   justify-content: center;
-  background-color: #e6ebdf;
+  justify-items: center;
 }
 .type-heading {
   position: absolute;
@@ -115,7 +121,7 @@ body {
   top: 8rem;
   left: 0px;
   display: block;
-  background-color: #e6e6e6;
+
   height: 500px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

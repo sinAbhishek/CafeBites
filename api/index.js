@@ -2,6 +2,7 @@ import express from "express";
 import mongoose, { connect } from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import ServerlessHttp from "serverless-http";
 import CafeRoute from "./routes/Cafe.js";
 import OrderRoute from "./routes/Order.js";
 import AuthRoute from "./routes/auth.js";
@@ -17,6 +18,7 @@ const mongoConnect = async () => {
   }
 };
 const PORT = process.env.PORT || 4000;
+
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());

@@ -16,6 +16,8 @@ const Menu = () => {
   const [items, setitems] = useState("");
   const [categoryDrink, setcategoryDrink] = useState("");
   const [categoryFood, setcategoryFood] = useState("");
+  const [beverage, setbeverage] = useState(false);
+  const [food, setfood] = useState(false);
   const Url = process.env.REACT_APP_Url;
   var Drinks = [];
   var Food = [];
@@ -69,45 +71,96 @@ const Menu = () => {
     setopen(!open);
     console.log(target);
   };
-
+  const showDrinks = () => {
+    setbeverage(true);
+    setfood(false);
+  };
+  const showFood = () => {
+    setbeverage(false);
+    setfood(true);
+    setType("");
+  };
+  const showAll = () => {
+    setbeverage(false);
+    setfood(false);
+    setType("");
+  };
   return (
     <div className="main">
       <Navbar />
       <div className="filter">
-        <button className="cat-btn" onClick={() => setopen(!open)}>
-          Categories
-          <ArrowDropDownIcon />
-        </button>
-        <div className="filter-wrapper">
-          <h2 className="type-heading">{type}</h2>
-          {/* <div className={open?"hide":"category"}>
-            <div className="cat-container">
-            <h1 className="heading-type">Drinks</h1>
-            {categoryDrink[0]&&categoryDrink.map((cr)=><span className="btn" onClick={()=>filter(`${cr}`)}>{cr}</span>)}
-            <h1 className="heading-type">Food</h1>
-            {categoryFood[0]&&categoryFood.map((cr)=><span className="btn" onClick={()=>filter(`${cr}`)}>{cr}</span>)}
-       
+        <div className="filter-wrapper mt-20">
+          <div className=" w-screen  h-20 flex flex-col">
+            <div className=" mt-4 flex justify-center">
+              <button
+                onClick={() => showAll()}
+                className={
+                  !beverage && !food
+                    ? " bg-red-700 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                    : " bg-teal-400 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                }
+              >
+                All
+              </button>
+              <button
+                onClick={() => showDrinks()}
+                className={
+                  beverage
+                    ? " bg-red-700 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                    : " bg-teal-400 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                }
+              >
+                Drinks
+              </button>
+              <button
+                onClick={() => showFood()}
+                className={
+                  food
+                    ? " bg-red-700 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                    : " bg-teal-400 text-white w-max px-2 mr-4 py-1 rounded-md  "
+                }
+              >
+                Food
+              </button>
             </div>
-
-            </div> */}
-          <div className={open ? "nonDesktop" : "hide"}>
-            <div className="cat-container">
-              <h1 className="heading-type">Drinks</h1>
-              {categoryDrink[0] &&
-                categoryDrink.map((cr) => (
-                  <span className="btn" onClick={() => filter(`${cr}`)}>
-                    {cr}
-                  </span>
-                ))}
-              <h1 className="heading-type">Food</h1>
-              {categoryFood[0] &&
-                categoryFood.map((cr) => (
-                  <span className="btn" onClick={() => filter(`${cr}`)}>
-                    {cr}
-                  </span>
-                ))}
-            </div>
+            {beverage && (
+              <div className=" flex justify-center mt-8">
+                <>
+                  {categoryDrink[0] &&
+                    categoryDrink.map((cr) => (
+                      <button
+                        className={
+                          type === cr
+                            ? "subBtn bg-black text-sm text-white w-max px-2 py-1 rounded-md mr-4 "
+                            : " subBtn bg-slate-100 font-medium text-sm text-slate-700 w-max px-2 py-2 rounded-md mr-4 border-2 border-blue-500 "
+                        }
+                        onClick={() => filter(`${cr}`)}
+                      >
+                        {cr}
+                      </button>
+                    ))}
+                </>
+              </div>
+            )}
+            {food && (
+              <div className="flex justify-center mt-8">
+                {categoryFood[0] &&
+                  categoryFood.map((cr) => (
+                    <button
+                      className={
+                        type === cr
+                          ? "subBtn bg-black text-sm text-white w-max px-2 py-1 rounded-md mr-4 "
+                          : "subBtn bg-slate-100 font-medium text-sm py-2 text-slate-700 w-max px-2  rounded-md mr-4 border-2 border-blue-500 "
+                      }
+                      onClick={() => filter(`${cr}`)}
+                    >
+                      {cr}
+                    </button>
+                  ))}
+              </div>
+            )}
           </div>
+
           {Loading ? (
             <div className="scalelod">
               <ScaleLoader

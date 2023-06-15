@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import post from "../../instance";
 import axios from "axios";
-import "./order.css";
+// import "./order.css";
 
 const Order = () => {
   const navigate = useNavigate();

@@ -14,9 +14,13 @@ const CartReducer = (state, action) => {
     case "AddToCart":
       var sum = "";
       if (state.total === null) {
-        sum = action.payload.price * action.payload.quantity;
+        sum =
+          action.payload.price * action.payload.quantity + action.payload.size;
       } else {
-        sum = state.total + action.payload.price * action.payload.quantity;
+        sum =
+          state.total +
+          action.payload.price * action.payload.quantity +
+          action.payload.size;
       }
       const update = (array, value) => {
         return [...array, value];
@@ -75,8 +79,8 @@ const CartReducer = (state, action) => {
   }
 };
 export const CartContextProvider = ({ children }) => {
-  const addtocart = (data, quantity) => {
-    dispatch({ type: "AddToCart", payload: { ...data, quantity } });
+  const addtocart = (data, quantity, size) => {
+    dispatch({ type: "AddToCart", payload: { ...data, quantity, size } });
   };
   const Increaseqty = (id) => {
     dispatch({ type: "IncreaseQuantity", payload: { id } });

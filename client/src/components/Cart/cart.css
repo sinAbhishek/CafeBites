@@ -1,7 +1,6 @@
 .order {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .cart-img {
   width: 100px;
@@ -10,7 +9,7 @@
 }
 .img-crt {
   display: flex;
-  width: 30%;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -19,7 +18,7 @@
 .crt-qty {
   display: flex;
   justify-content: center;
-  width: 15%;
+  width: 100%;
   align-items: center;
 }
 .qty-btn2 {
@@ -37,7 +36,7 @@
   margin-bottom: 5px;
 }
 .price-itm {
-  width: 15%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -60,6 +59,8 @@
   background-color: rgb(234, 72, 36);
   border-radius: 0.3rem;
   padding: 0.3rem;
+  width: max-content;
+  margin: 1rem auto;
 }
 .delete:hover {
   cursor: pointer;

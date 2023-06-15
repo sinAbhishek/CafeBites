@@ -22,12 +22,12 @@ const Cart = ({ prop }) => {
   return item_count ? (
     <>
       <div className="order" key={prop.id}>
-        <div className="img-crt">
+        <div className="img-crt flex flex-col">
           <img className="cart-img" src={prop.image} alt="" />
           <h2 className="name-cart">{prop.name}</h2>
         </div>
         <div className="price-itm">
-          <p>{prop.price}$</p>
+          <p>{prop.price * prop.quantity + prop.size}$</p>
         </div>
         <div className="crt-qty">
           <button className="qty-btn2" onClick={() => checkquantity()}>

@@ -8,6 +8,9 @@
   width: 100%;
   z-index: 1;
 }
+.alt-logo {
+  display: none;
+}
 .icon {
   color: #cfc5be;
   margin-right: 10px;
@@ -20,7 +23,6 @@
 }
 .logo {
   font-family: "Pacifico", cursive;
-  color: yellow;
   font-size: 30px;
   margin-left: 15px;
 }
@@ -131,5 +133,13 @@
   }
   .cart-icon {
     margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .alt-logo {
+    display: block;
+  }
+  .logo {
+    display: none;
   }
 }
