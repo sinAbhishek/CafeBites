@@ -4,3 +4,20 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media only screen and (max-width: 630px) {
+  .bookBar {
+    max-width: 380px !important;
+  }
+  .bookBar input {
+    max-width: 100px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .bookBar {
+    max-width: 350px !important;
+  }
+  .bookBar input {
+    max-width: 80px;
+  }
+}

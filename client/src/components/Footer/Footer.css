@@ -4,3 +4,15 @@
   font-size: 30px;
   margin-left: 15px;
 }
+
+@media only screen and (max-width: 500px) {
+  .midlog {
+    font-size: 20px;
+  }
+  .footL > p {
+    font-size: 20px !important;
+  }
+  .footR > p {
+    font-size: 20px !important;
+  }
+}

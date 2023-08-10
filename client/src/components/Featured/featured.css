@@ -1,7 +1,10 @@
 .featured {
   width: 100vw;
 }
-
+.pop {
+  font-family: "Arimo", sans-serif;
+  text-decoration-color: rgb(167, 154, 154);
+}
 .slidercont {
   width: 80%;
   margin: 0 auto;
@@ -10,7 +13,7 @@
   height: 100%;
 }
 .content {
-  margin: 50px 0px;
+  margin: 20px 0px 50px 0;
   width: 400%;
   height: 70%;
   display: flex;
@@ -158,24 +161,35 @@
   .des-img {
     height: 400px;
   }
+  .para1,
+  .para2,
+  .para3 {
+    font-size: 15px;
+  }
 }
 @media only screen and (max-width: 550px) {
   .heading1,
   .heading2,
   .heading3 {
-    padding-top: 100px;
+    padding-top: 80px;
     font-size: 25px;
     font-family: "Unbounded", cursive;
+  }
+  .para1,
+  .para2,
+  .para3 {
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 500px) {
   .content {
     height: 40%;
   }
+
   .heading1,
   .heading2,
   .heading3 {
-    padding-top: 100px;
+    padding-top: 80px;
     font-size: 20px;
   }
   .para1,

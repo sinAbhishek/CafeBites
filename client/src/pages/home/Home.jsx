@@ -9,6 +9,7 @@ const Home = () => {
     <div className=" flex flex-col justify-center items-center">
       <Navbar />
       <Section />
+      <hr />
       <Featured />
       <Book />
       <Footer />

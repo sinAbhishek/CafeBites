@@ -118,17 +118,18 @@ const Navbar = () => {
                     <Cart prop={product} />
                   ))}
                 </div>
-                <div className="final-checkout">
+                <div className="final-checkout mt-4">
                   <h3 className="sub-total-h1 text-xl font-semibold">
                     Subtotal- <span className="tot-price">{total}</span>$
                   </h3>
-
-                  <button
-                    onClick={handle}
-                    className="btn-checkout px-4 w-max bg-slate-950 text-white rounded-full py-1"
-                  >
-                    CHECKOUT
-                  </button>
+                  <div className=" flex justify-center mt-4">
+                    <button
+                      onClick={handle}
+                      className="btn-checkout px-4 w-max bg-slate-950 text-white rounded-full py-1 mx-auto hover:bg-gray-800"
+                    >
+                      CHECKOUT
+                    </button>
+                  </div>
                 </div>
               </div>
             ) : (

@@ -7,11 +7,13 @@ import { NavLink } from "react-router-dom";
 const Featured = () => {
   return (
     <div className="featured flex justify-center flex-col  ">
-      <div className=" w-full flex justify-center">
-        <h2 className=" font-bold text-3xl text-red-950 mt-4 "> Popular Now</h2>
-      </div>
-
       <div className="slidercont ">
+        <div className=" w-full flex">
+          <h2 className=" pop text-4xl text-gray-800 mt-4 underline ">
+            {" "}
+            Popular Now
+          </h2>
+        </div>
         <div className="content">
           <div className="des-img bgc1">
             <div className="desc ">
@@ -23,13 +25,13 @@ const Featured = () => {
                 Matcha Crème Frappuccino®"
               </p>
               <NavLink to="/Brew/63b6a2c8631a9277e254402e">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mt-8 py-2">
+                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
             </div>
             <div className="target-img">
-              <img className="featImg" src={img1} alt="" />
+              <img loading="lazy" className="featImg" src={img1} alt="" />
             </div>
           </div>
           <div className="des-img bgc2">
@@ -40,13 +42,13 @@ const Featured = () => {
                 Cream Nitro Cold Brew.{" "}
               </p>
               <NavLink to="/Brew/63b6a377631a9277e2544036">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mt-8 py-2">
+                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
             </div>
             <div className="target-img">
-              <img className="featImg" src={img2} alt="" />
+              <img loading="lazy" className="featImg" src={img2} alt="" />
             </div>
           </div>
           <div className="des-img bgc3">
@@ -57,13 +59,13 @@ const Featured = () => {
                 espresso in every sip"
               </p>
               <NavLink to="/Brew/63b6a11b631a9277e254401b">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mt-8 py-2">
+                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
             </div>
             <div className="target-img">
-              <img className="featImg" src={img3} alt="" />
+              <img loading="lazy" className="featImg" src={img3} alt="" />
             </div>
           </div>
           <div className="des-img bgc1">
@@ -76,13 +78,13 @@ const Featured = () => {
                 Matcha Crème Frappuccino®"
               </p>
               <NavLink to="/Brew/63b6a2c8631a9277e254402e">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mt-8 py-2">
+                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
             </div>
             <div className="target-img">
-              <img className="featImg" src={img1} alt="" />
+              <img loading="lazy" className="featImg" src={img1} alt="" />
             </div>
           </div>
         </div>

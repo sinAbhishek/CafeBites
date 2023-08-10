@@ -2,6 +2,7 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: 0.3s;
   opacity: 0%;
+  min-width: 240px;
 }
 .key:hover {
   transform: scale(1.1);
@@ -19,14 +20,19 @@
     height: 110px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
+  .key {
+    min-width: 180px;
+  }
+}
+@media only screen and (max-width: 480px) {
   .key {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    width: 90%;
+    min-width: 180px;
   }
 
   .item-heading {
@@ -35,5 +41,10 @@
   }
   .itm-lnk {
     width: 30%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .key {
+    min-width: 300px;
   }
 }

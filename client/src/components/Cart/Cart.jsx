@@ -24,22 +24,27 @@ const Cart = ({ prop }) => {
       <div className="order" key={prop.id}>
         <div className="img-crt flex flex-col">
           <img className="cart-img" src={prop.image} alt="" />
-          <h2 className="name-cart">{prop.name}</h2>
+          <h2 className="name-cart font-semibold">{prop.name}</h2>
         </div>
         <div className="price-itm">
-          <p>{prop.price * prop.quantity + prop.size}$</p>
+          <p className=" font-semibold">
+            {prop.price * prop.quantity + prop.size}$
+          </p>
         </div>
         <div className="crt-qty">
           <button className="qty-btn2" onClick={() => checkquantity()}>
             -
           </button>
-          <p>{prop.quantity}</p>
+          <p className=" font-semibold">{prop.quantity}</p>
           <button className="qty-btn2" onClick={() => test()}>
             +
           </button>
         </div>
 
-        <div onClick={() => deleteitm()} className="delete">
+        <div
+          onClick={() => deleteitm()}
+          className=" bg-red-400 w-max px-2 py-1 rounded-md font-medium mx-auto mt-4 mb-4 cursor-pointer"
+        >
           Delete
         </div>
       </div>

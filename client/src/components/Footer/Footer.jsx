@@ -9,7 +9,7 @@ const Footer = () => {
       className="mt-8 w-screen h-52 flex flex-col"
     >
       <div className=" flex justify-between items-center h-4/5">
-        <div className=" w-1/3 flex flex-col justify-center items-center">
+        <div className="footL w-1/3 flex flex-col justify-center items-center">
           <p className=" text-2xl font-bold text-white">Follow Us</p>
           <div className="flex mt-8">
             <BsTwitter className=" mr-4" size={"1.5rem"} color="#f5c7b5" />
@@ -21,7 +21,7 @@ const Footer = () => {
           {" "}
           <span className="midlog">Cafe Bites</span>
         </div>
-        <div className="w-1/3 flex flex-col justify-center items-center">
+        <div className="footR w-1/3 flex flex-col justify-center items-center">
           <p className=" text-2xl font-bold text-white">Links</p>
           <div className="flex mt-8 flex-col">
             <NavLink to={"/"} className={" no-underline text-slate-100"}>

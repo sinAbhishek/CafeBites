@@ -6,6 +6,7 @@ import Result from "../../components/Search result/Search_result";
 import useFetch from "../../hooks/useFetch.js";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import Animation from "../../data/image/loading.gif";
 
 const Menu = () => {
   const y = "Hot Coffees";
@@ -86,7 +87,21 @@ const Menu = () => {
     setType("");
   };
   return (
-    <div className="main">
+    <div className="main relative">
+      {Loading && (
+        <div className="absolute top-0 left-0 right-0  h-screen">
+          <div className="LoadingBg absolute left-0 bottom-0 top-0 right-0 bg-gray-800 bg-cover bg-no-repeat bg z-50 flex items-center justify-center">
+            <ScaleLoader
+              color={"#03ff46"}
+              loading={Loading}
+              width={"3px"}
+              height={"20px"}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        </div>
+      )}
       <Navbar />
       <div className="filter">
         <div className="filter-wrapper mt-20">
@@ -161,22 +176,9 @@ const Menu = () => {
             )}
           </div>
 
-          {Loading ? (
-            <div className="scalelod">
-              <ScaleLoader
-                color={"#03ff46"}
-                loading={Loading}
-                width={"3px"}
-                height={"20px"}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
-            </div>
-          ) : (
-            <div className="results">
-              <Result items={data} />
-            </div>
-          )}
+          <div className="results">
+            <Result items={data} />
+          </div>
         </div>
       </div>
     </div>

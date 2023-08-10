@@ -10,12 +10,12 @@ const Book = () => {
       <div className="absolute top-0 bottom-0 right-0 left-0 z-20 flex justify-center items-center">
         <div className=" flex flex-col   ">
           <div className=" flex justify-center">
-            <h2 className=" text-white font-bold text-4xl">
+            <h2 className=" text-white font-bold text-3xl sm:text-4xl">
               Lets Book Your Table
             </h2>
           </div>
 
-          <div className=" flex h-12 bg-orange-100 px-2 rounded-full items-center mt-8">
+          <div className="bookBar flex h-12 bg-orange-100 px-2 rounded-full items-center mt-8">
             <div className="flex items-center">
               <BsTelephone color="#8a1c15" size={"1.1rem"} />
               <input

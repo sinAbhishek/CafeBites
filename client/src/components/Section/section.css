@@ -5,8 +5,10 @@
     rgba(255, 253, 251, 1) 0%,
     rgba(228, 179, 123, 1) 100%
   );
-  width: 100%;
-  height: 80vh;
+  width: 100vw;
+  overflow: hidden;
+  height: 70vh;
+  margin-top: 60px;
 }
 .cspill {
   width: 40rem;
@@ -16,4 +18,30 @@
 .cbean {
   width: 18rem;
   height: 18rem;
+}
+@media only screen and (max-width: 768px) {
+  .cspill {
+    width: 30rem;
+    height: 30rem;
+  }
+  .cbean {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .txt12 {
+    font-size: 2rem !important;
+  }
+  .flex12 {
+  }
+  .cspill {
+    display: none;
+  }
+  .flex13 {
+    width: 50% !important;
+  }
+  .s1 {
+    height: 60vh;
+  }
 }
