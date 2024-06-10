@@ -1,5 +1,5 @@
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -61,42 +61,49 @@ const Navbar = () => {
     <div className="Navbar">
       <div className="Container">
         <div className="left">
-          <span className="logo text-amber-500">Cafe Bites</span>
+          <span className="logo text-gray-600">Cafe Bites</span>
           <div className="alt-logo">
             <GiCoffeeCup
-              color="white"
+              color="black"
               size={"2.5rem"}
               className="ml-4 flex items-center"
             />
           </div>
         </div>
         <div className="menu-logo">
-          <Link className="home" to="/">
+          <NavLink className="home text-slate-600" to="/">
             Home{" "}
-          </Link>
-          <Link className="menu" to="/menu">
+          </NavLink>
+          <NavLink className="menu text-slate-600" to="/menu">
             Discover
-          </Link>
+          </NavLink>
         </div>
 
         <div className="navItems">
-          <div onClick={onOpen} className="cart-icon">
-            <BsCart3 color="white" size={"2rem"} className="mr-2" />
+          <div onClick={onOpen} className="cart-icon hover:cursor-pointer">
+            <BsCart3 color="black" size={"2rem"} className="mr-2" />
             {item_count ? <div className="cart-count">{item_count}</div> : null}
           </div>
 
           <div className="buttons">
             {user ? (
               <div className="userlogin">
-                <p className="username">{`${user.username}`}</p>
-                <button className="logout" onClick={handleclick}>
-                  <FontAwesomeIcon className="icon-logout" icon={faPowerOff} />
+                <p className="username italic text-amber-800 font-bold mr-2">{`${user.username}`}</p>
+                <button
+                  className=" flex justify-center items-center bg-red-600 p-2 rounded-md hover:cursor-pointer"
+                  onClick={handleclick}
+                >
+                  <FontAwesomeIcon
+                    className="flex justify-center items-center  "
+                    icon={faPowerOff}
+                    color="white"
+                  />
                 </button>
               </div>
             ) : (
               <>
-                <button className="navButton">
-                  <a className="btn-log" href="/Login">
+                <button className="navButton w-max px-4 py-1 rounded-md bg-black hover:scale-105">
+                  <a className="btn-log bg-black text-white" href="/Login">
                     Login
                   </a>
                 </button>
@@ -112,8 +119,8 @@ const Navbar = () => {
 
           <DrawerBody>
             {products[0] ? (
-              <div className="container-crt">
-                <div className="main-cart">
+              <div className=" p-2 mt-4">
+                <div className="">
                   {products.map((product) => (
                     <Cart prop={product} />
                   ))}

@@ -7,15 +7,16 @@
 }
 .slidercont {
   width: 80%;
-  margin: 0 auto;
-
+  margin: 100px auto 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
-  height: 100%;
+  height: max-content;
 }
 .content {
-  margin: 20px 0px 50px 0;
+  /* margin: 20px 0px 50px 0; */
+
   width: 400%;
-  height: 70%;
+  height: max-content;
   display: flex;
   position: relative;
   animation: 10s surf infinite;
@@ -25,12 +26,12 @@
   animation-play-state: paused;
 }
 .des-img {
-  border-radius: 10px;
   width: 100%;
   height: 500px;
   display: flex;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
 }
 .desc {
   text-align: center;
@@ -50,6 +51,31 @@
 }
 
 .bgc1 {
+  background: rgb(255, 253, 251);
+  background: linear-gradient(
+    93deg,
+    rgba(255, 253, 251, 1) 0%,
+    rgba(205, 249, 202, 1) 100%,
+    rgba(184, 247, 181, 1) 100%
+  );
+}
+.bgc2 {
+  background: rgb(255, 253, 251);
+  background: linear-gradient(
+    93deg,
+    rgba(255, 253, 251, 1) 0%,
+    rgba(247, 194, 181, 1) 100%
+  );
+}
+.bgc3 {
+  background: rgb(255, 253, 251);
+  background: linear-gradient(
+    93deg,
+    rgba(255, 253, 251, 1) 0%,
+    rgba(247, 181, 211, 1) 100%
+  );
+}
+/* .bgc1 {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -83,30 +109,34 @@
     rgba(119, 103, 205, 1) 0%,
     rgba(115, 60, 110, 1) 100%
   );
-}
+} */
 .heading1,
 .heading2,
 .heading3 {
   padding-top: 150px;
   font-size: 35px;
   font-family: "Unbounded", cursive;
+  color: black;
 }
 .para1 {
   padding-top: 10px;
   font-size: 20px;
   font-family: "Prompt", sans-serif;
+  color: black;
 }
 
 .para2 {
   padding-top: 10px;
   font-size: 20px;
   font-family: "Prompt", sans-serif;
+  color: black;
 }
 
 .para3 {
   padding-top: 10px;
   font-size: 20px;
   font-family: "Prompt", sans-serif;
+  color: black;
 }
 @keyframes surf {
   0% {
@@ -187,14 +217,26 @@
   }
 
   .heading1,
-  .heading2,
-  .heading3 {
-    padding-top: 80px;
-    font-size: 20px;
+  .heading2 {
+    padding-top: 50px;
+    font-size: 18px;
   }
   .para1,
-  .para2,
+  .para2 {
+    font-size: 12px;
+  }
+  .heading3 {
+    padding-top: 50px;
+    font-size: 16px;
+  }
+  .des-img {
+    height: 300px;
+  }
   .para3 {
-    font-size: 15px;
+    font-size: 10px;
+  }
+  .desc {
+    width: 50%;
+    height: 100%;
   }
 }

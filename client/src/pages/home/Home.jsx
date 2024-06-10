@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div className=" flex flex-col justify-center items-center">
       <Navbar />
-      <Section />
-      <hr />
+      {/* <Section />
+      <hr /> */}
       <Featured />
       <Book />
       <Footer />

@@ -1,12 +1,17 @@
 .Navbar {
   height: 80px;
-  background-color: black;
+  background-color: rgb(246, 240, 240);
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 10px -20px;
   justify-content: center;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 1;
+}
+.chakra-modal__body {
+  padding: 0px !important;
+  background-color: antiquewhite;
 }
 .alt-logo {
   display: none;
@@ -19,7 +24,7 @@
   transition: 0.5s;
 }
 .icon {
-  color: #cfc5be;
+  color: #85491e;
   margin-right: 10px;
 }
 .Container {
@@ -73,10 +78,9 @@
 }
 .home,
 .menu {
-  font-family: "Oswald", sans-serif;
-  color: bisque;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
 }
 .home:hover {
   color: aqua;
@@ -105,15 +109,6 @@
   margin-right: 30px;
 }
 
-.navButton {
-  margin-left: 10px;
-  border-radius: 30px;
-  background-color: #fffaf1;
-  border: none;
-  height: 30px;
-  width: 60px;
-  cursor: pointer;
-}
 .logout {
   background-color: black;
   cursor: pointer;
@@ -129,8 +124,7 @@
 .btn-log {
   text-decoration: none;
   background-color: #fffaf1;
-  color: black;
-  font-family: "Oswald", sans-serif;
+
   font-weight: bold;
   font-size: 15px;
 }

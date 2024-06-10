@@ -7,7 +7,7 @@ body {
 
 .main {
   min-height: 100vh;
-  background-color: rgb(223, 233, 241);
+  background-color: white;
 }
 .scalelod {
   width: 100vw;
@@ -61,8 +61,6 @@ body {
   transition: 0.3s;
 }
 .results {
-  padding: 20px;
-  margin-top: 4rem;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -145,5 +143,15 @@ body {
   .results {
     width: 100%;
     padding: 0px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .types {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .t1 {
+    margin-bottom: 10px;
   }
 }

@@ -8,12 +8,6 @@ const Featured = () => {
   return (
     <div className="featured flex justify-center flex-col  ">
       <div className="slidercont ">
-        <div className=" w-full flex">
-          <h2 className=" pop text-4xl text-gray-800 mt-4 underline ">
-            {" "}
-            Popular Now
-          </h2>
-        </div>
         <div className="content">
           <div className="des-img bgc1">
             <div className="desc ">
@@ -25,7 +19,7 @@ const Featured = () => {
                 Matcha Crème Frappuccino®"
               </p>
               <NavLink to="/Brew/63b6a2c8631a9277e254402e">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
+                <button className=" mt-2 bg-slate-900 text-sm md:text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
@@ -35,14 +29,14 @@ const Featured = () => {
             </div>
           </div>
           <div className="des-img bgc2">
-            <div className="desc ">
+            <div className="desc ml-2 ">
               <h1 className="heading2">Vanilla Cream Dream in a Cup</h1>
               <p className="para2">
                 "Indulge in the smooth and creamy taste of our Vanilla Sweet
-                Cream Nitro Cold Brew.{" "}
+                Cream Nitro Cold Brew."{" "}
               </p>
               <NavLink to="/Brew/63b6a377631a9277e2544036">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
+                <button className=" mt-2 bg-slate-900 text-sm md:text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
@@ -59,7 +53,7 @@ const Featured = () => {
                 espresso in every sip"
               </p>
               <NavLink to="/Brew/63b6a11b631a9277e254401b">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
+                <button className=" mt-2 bg-slate-900 text-sm md:text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
@@ -71,14 +65,14 @@ const Featured = () => {
           <div className="des-img bgc1">
             <div className="desc ">
               <h1 className="heading1">
-                "Matcha Crème Frappuccino®: Energize Now"
+                Matcha Crème Frappuccino®: Energize Now
               </h1>
               <p className="para1">
                 "Experience the Perfect Balance of Taste and Energy with our
                 Matcha Crème Frappuccino®"
               </p>
               <NavLink to="/Brew/63b6a2c8631a9277e254402e">
-                <button className=" bg-slate-900 text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
+                <button className=" mt-2 bg-slate-900 text-sm md:text-lg text-slate-50 w-max px-4 rounded-full mb-2 py-2">
                   Order now
                 </button>
               </NavLink>
