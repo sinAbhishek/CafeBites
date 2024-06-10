@@ -17,7 +17,7 @@ const Menu = () => {
   const [type, setType] = useState("");
   const [open, setopen] = useState(false);
   const [Loading, setloading] = useState(true);
-  const { data } = useFetch(`/Brew?type=${type}`);
+  const { data,loading } = useFetch(`/Brew?type=${type}`);
   const [items, setitems] = useState("");
   const [categoryDrink, setcategoryDrink] = useState("");
   const [categoryFood, setcategoryFood] = useState("");
@@ -123,7 +123,7 @@ const Menu = () => {
   };
   return (
     <div className="main relative">
-      {Loading && (
+      {loading && (
         <div className="absolute top-0 left-0 right-0  h-screen">
           <div className="LoadingBg absolute left-0 bottom-0 top-0 right-0 bg-slate-200 bg-cover bg-no-repeat bg z-50 flex items-center justify-center">
             {/* <ScaleLoader

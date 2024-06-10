@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
 .Navbar {
   height: 80px;
   background-color: rgb(246, 240, 240);
@@ -9,14 +11,22 @@
   width: 100%;
   z-index: 1;
 }
+.sub-total-h1{
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 .chakra-modal__body {
   padding: 0px !important;
-  background-color: antiquewhite;
+  background-color: rgb(243, 237, 230);
 }
 .alt-logo {
   display: none;
 }
 .btn-checkout {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   transition: 0.5s;
 }
 .btn-checkout:hover {

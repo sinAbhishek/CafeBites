@@ -126,7 +126,7 @@ const Navbar = () => {
                   ))}
                 </div>
                 <div className="final-checkout mt-4">
-                  <h3 className="sub-total-h1 text-xl font-semibold">
+                  <h3 className="sub-total-h1 text-lg font-semibold">
                     Subtotal- <span className="tot-price">{total}</span>$
                   </h3>
                   <div className=" flex justify-center mt-4">
@@ -145,8 +145,6 @@ const Navbar = () => {
               </div>
             )}
           </DrawerBody>
-
-          <DrawerFooter></DrawerFooter>
         </DrawerContent>
       </Drawer>
     </div>
